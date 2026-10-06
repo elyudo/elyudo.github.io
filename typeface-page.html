@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typeface Specimen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:white;
+    color:black;
+    font-family:'Space Mono', monospace;
+    overflow-x:hidden;
+}
+
+/* GRAIN */
+.grain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:9999;
+    opacity:0.12;
+    mix-blend-mode:multiply;
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png");
+}
+
+/* NAV */
+nav{
+    border-bottom:6px solid black;
+    padding:30px 5vw;
+}
+
+.back-link{
+    text-decoration:none;
+    color:black;
+    font-family:'Archivo Black', sans-serif;
+    text-transform:uppercase;
+    font-size:1.2rem;
+}
+
+/* HEADER */
+.header{
+    padding:60px 5vw;
+    border-bottom:6px solid black;
+}
+
+h1{
+    font-family:'Archivo Black', sans-serif;
+    font-size:clamp(4rem,10vw,8rem);
+    line-height:0.9;
+    text-transform:uppercase;
+    letter-spacing:-4px;
+}
+
+/* COVER */
+.cover{
+    padding:60px 5vw;
+}
+
+.cover-box{
+    border:6px solid black;
+    transform:rotate(-1deg);
+    overflow:hidden;
+    transition:0.2s;
+}
+
+.cover-box img{
+    width:100%;
+    display:block;
+}
+
+.cover-box:hover{
+    filter:contrast(150%) grayscale(100%);
+    transform:rotate(0deg) scale(1.02);
+}
+
+/* TYPE SPECIMEN */
+.specimen{
+    padding:60px 5vw;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* BLOCKS */
+.block{
+    border:6px solid black;
+    padding:30px;
+    background:white;
+    transform:rotate(1deg);
+    transition:0.2s;
+}
+
+.block:nth-child(2){
+    transform:rotate(-1.5deg);
+}
+
+.block:hover{
+    filter:contrast(150%) grayscale(100%);
+    transform:rotate(0deg) scale(1.02);
+}
+
+/* FONT LOADING (CRUNK) */
+@font-face {
+    font-family: "Crunk";
+    src: url("Crunk-Sober.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Crunk";
+    src: url("Crunk-Tipsy.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Crunk";
+    src: url("Crunk-Drunk.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* TYPE SYSTEM */
+.name{
+    font-family:'Archivo Black', sans-serif;
+    font-size:2.5rem;
+    text-transform:uppercase;
+}
+
+.large{
+    font-family:"Crunk", sans-serif;
+    font-size:clamp(2.5rem,5vw,5rem);
+    line-height:1;
+    text-transform:uppercase;
+}
+
+/* WEIGHTS */
+.light{
+    font-weight:300;
+}
+
+.regular{
+    font-weight:400;
+}
+
+.bold{
+    font-weight:700;
+}
+
+.paragraph{
+    font-size:1rem;
+    line-height:1.6;
+    max-width:800px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- GRAIN -->
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav>
+    <a class="back-link" href="index.html">
+        ← Back to Portfolio
+    </a>
+</nav>
+
+<!-- TITLE -->
+<section class="header">
+    <h1>
+        Crunk
+    </h1>
+</section>
+
+<!-- COVER IMAGE -->
+<section class="cover">
+
+    <div class="cover-box">
+        <img src="Type_Spec.jpg" alt="Typeface Cover">
+    </div>
+
+</section>
+
+<!-- TYPE SPECIMEN -->
+<section class="specimen">
+
+    <!-- NAME -->
+    <div class="block">
+        <div class="name">Crunk Typeface</div>
+    </div>
+
+    <!-- LIGHT -->
+    <div class="block">
+        <div class="large light">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+            abcdefghijklmnopqrstuvwxyz<br>
+            0123456789<br>
+	@&.,?!'":;()
+        </div>
+    </div>
+
+    <!-- REGULAR -->
+    <div class="block">
+        <div class="large regular">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+            abcdefghijklmnopqrstuvwxyz<br>
+            0123456789<br>
+	@&.,?!'":;()
+        </div>
+    </div>
+
+    <!-- BOLD -->
+    <div class="block">
+        <div class="large bold">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+            abcdefghijklmnopqrstuvwxyz<br>
+            0123456789<br>
+	@&.,?!'":;()
+        </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="block">
+        <p class="paragraph">
+             I designed the typeface ‘Crunk’ based on The Kentish Drovers, Wetherspoons, in Peckham. It represents the way people interact within the space with it having three levels of intoxication; Sober, Tipsy, Drunk. Each variation progressively becomes more distorted, mimicking slurred speech and stumbling after becoming too drunk. This typeface is non-uniform and somewhat hard to read. The numbers and special characters are represented as drinks and there is no uppercase because if you write a drunk text it is unlikely you will still use uppercase letters. ‘Crunk’ has a sense of irony and has a lot of personality to it.
+        </p>
+    </div>
+
+</section>
+
+</body>
+</html>
